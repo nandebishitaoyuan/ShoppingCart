@@ -1,4 +1,4 @@
-package com.Javaone.test.dao.impl;
+package com.Javaone.dao.impl;
 
 import com.Javaone.dao.impl.IUserInfoImpl;
 import com.Javaone.pojo.UserInfo;
