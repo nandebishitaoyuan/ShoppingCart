@@ -1,6 +1,5 @@
 package com.Javaone.dao;
 
-import com.Javaone.pojo.AdminInfo;
 import com.Javaone.pojo.UserInfo;
 
 import java.sql.SQLException;

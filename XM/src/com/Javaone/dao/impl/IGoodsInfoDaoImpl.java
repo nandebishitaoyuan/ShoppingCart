@@ -2,7 +2,6 @@ package com.Javaone.dao.impl;
 
 import com.Javaone.dao.IGoodsInfoDao;
 import com.Javaone.pojo.GoodsInfo;
-import com.Javaone.pojo.OrderInfo;
 import com.Javaone.util.DBUtil;
 
 import java.sql.ResultSet;

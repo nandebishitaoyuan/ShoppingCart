@@ -1,7 +1,6 @@
 package com.Javaone.dao.impl;
 
 import com.Javaone.dao.IUserInfo;
-import com.Javaone.pojo.AdminInfo;
 import com.Javaone.pojo.UserInfo;
 import com.Javaone.util.DBUtil;
 
