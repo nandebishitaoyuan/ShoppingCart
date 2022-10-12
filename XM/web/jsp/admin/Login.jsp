@@ -12,10 +12,24 @@
     <title>denglu</title>
 </head>
 <body>
-<form action="/hello/test" method="get">
-    <input type="submit" value="测试">
+<form action="/hello/test" method="post">
+    <table align="center">
+        <tr>
+            <td colspan="2" align="center"><h1>管理员登录</h1></td>
+        </tr>
+        <tr>
+            <td>用户名：</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" name="pwd"></td>
+        </tr>
+        <tr>
+            <br/><td colspan="2" align="center"><input type="submit" value="登录"></td>
+        </tr>
+    </table>
 </form>
-<%= request.getAttribute("test")%>
-${requestScope.test}
+${requestScope.login}
 </body>
 </html>

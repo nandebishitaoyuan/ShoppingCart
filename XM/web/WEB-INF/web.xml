@@ -4,19 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>TestSrvlet</servlet-name>
-        <servlet-class>com.Javaone.control.TestServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>TestSrvlet</servlet-name>
-        <url-pattern>/test</url-pattern>
-    </servlet-mapping>
-    <servlet>
         <servlet-name>AdminServlet</servlet-name>
         <servlet-class>com.Javaone.control.AdminServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AdminServlet</servlet-name>
-        <url-pattern>/Admin</url-pattern>
+        <url-pattern>/admin</url-pattern>
     </servlet-mapping>
 </web-app>
