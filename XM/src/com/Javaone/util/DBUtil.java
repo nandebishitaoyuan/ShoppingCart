@@ -30,7 +30,7 @@ public class DBUtil {
         return conn;
     }
     //条件查询
-    public ResultSet getQueryResult(String sql, List list){
+    public <T> ResultSet getQueryResult(String sql, List<T> list){
         getConnection();
         try {
             statement = conn.prepareStatement(sql);
@@ -45,7 +45,7 @@ public class DBUtil {
         }
     }
     //修改
-    public int Update(String sql,List list){
+    public <T> int Update(String sql,List<T> list){
         getConnection();
         try {
             statement = conn.prepareStatement(sql);

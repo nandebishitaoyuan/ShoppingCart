@@ -11,4 +11,36 @@
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>/admin</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>LoginUserServlet</servlet-name>
+        <servlet-class>com.Javaone.control.LoginUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginUserServlet</servlet-name>
+        <url-pattern>/userLogin</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>addUserServlet</servlet-name>
+        <servlet-class>com.Javaone.control.AddUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addUserServlet</servlet-name>
+        <url-pattern>/addUser</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Search</servlet-name>
+        <servlet-class>com.Javaone.control.SearchGoodsIngoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Search</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

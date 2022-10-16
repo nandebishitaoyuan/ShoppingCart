@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IGoodsInfoDaoImpl implements IGoodsInfoDao {
-    DBUtil dbUtil = new DBUtil();
+    private DBUtil dbUtil = new DBUtil();
 
     //全部查询
     @Override
@@ -35,19 +35,50 @@ public class IGoodsInfoDaoImpl implements IGoodsInfoDao {
     }
     //条件查询
     public List<GoodsInfo> getGoodsInfoList(GoodsInfo goodsInfo) throws SQLException{
-        String sql = "SELECT * FROM goodsinfo where Gid=? || Gname=? || Gprice=? || Gclass=? || Gamount=? || Gdate=? || Gimgurl=? || Glook=? || Gintro=? || Gbrief=?";
-        List list = new ArrayList();
-        list.add(goodsInfo.getgId());
-        list.add(goodsInfo.getgName());
-        list.add(goodsInfo.getgPrice());
-        list.add(goodsInfo.getgClass());
-        list.add(goodsInfo.getgAmount());
-        list.add(goodsInfo.getgDate());
-        list.add(goodsInfo.getgImgurl());
-        list.add(goodsInfo.gethLook());
-        list.add(goodsInfo.getgIntro());
-        list.add(goodsInfo.getgBrief());
-        ResultSet queryResult = dbUtil.getQueryResult(sql, list);
+        StringBuffer sql = new StringBuffer(80);
+        List params = new ArrayList();
+        sql.append("SELECT * FROM goodsinfo where 1=1 ");
+        if (goodsInfo.getgId()!=null){
+            sql.append(" and Gid=?");
+            params.add(goodsInfo.getgId());
+        }
+        if (goodsInfo.getgName()!=null){
+            sql.append(" and Gname=?");
+            params.add(goodsInfo.getgName());
+        }
+        if (goodsInfo.getgPrice()!=null){
+            sql.append(" and Gprice=?");
+            params.add(goodsInfo.getgPrice());
+        }
+        if (goodsInfo.getgClass()!=null){
+            sql.append(" and Gclass=?");
+            params.add(goodsInfo.getgClass());
+        }
+        if (goodsInfo.getgAmount()!=null){
+            sql.append(" and Gamount=?");
+            params.add(goodsInfo.getgAmount());
+        }
+        if (goodsInfo.getgDate()!=null){
+            sql.append(" and Gdate=?");
+            params.add(goodsInfo.getgDate());
+        }
+        if (goodsInfo.getgImgurl()!=null){
+            sql.append(" and Gimgurl=?");
+            params.add(goodsInfo.getgImgurl());
+        }
+        if (goodsInfo.gethLook()!=null){
+            sql.append(" and Glook=?");
+            params.add(goodsInfo.gethLook());
+        }
+        if (goodsInfo.getgIntro()!=null){
+            sql.append(" and Gintro=?");
+            params.add(goodsInfo.getgIntro());
+        }
+        if (goodsInfo.getgBrief()!=null){
+            sql.append(" and Gbrief=?");
+            params.add(goodsInfo.getgBrief());
+        }
+        ResultSet queryResult = dbUtil.getQueryResult(sql.toString(), params);
         List<GoodsInfo> GoodsInfoList = new ArrayList<>();
         while (queryResult.next()) {
             GoodsInfo goods = new GoodsInfo();

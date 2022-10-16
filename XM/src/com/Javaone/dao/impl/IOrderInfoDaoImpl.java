@@ -36,18 +36,43 @@ public class IOrderInfoDaoImpl implements IOrderInfoDao {
 
     //条件查询
     public List<OrderInfo> getOrderInfoList(OrderInfo order) throws SQLException {
-        String sql = "SELECT * FROM orderinfo where Oid=? || AId=? || Odate=? || Ostate=? || Orecname=? || Orecadr=? || Orectel=? || Uid=? || Ototalprice=?";
-        List<Object> params = new ArrayList<>();
-        params.add(order.getoId());
-        params.add(order.getaId());
-        params.add(order.getoDate());
-        params.add(order.getoState());
-        params.add(order.getoRecname());
-        params.add(order.getoRecadr());
-        params.add(order.getoRectel());
-        params.add(order.getuId());
+        StringBuffer sql = new StringBuffer(80);
+        List params = new ArrayList();
+        sql.append("SELECT * FROM orderinfo where 1=1 ");
+        if (order.getoId()!=null){
+            sql.append(" and Oid=?");
+            params.add(order.getoId());
+        }
+        if (order.getaId()!=null){
+            sql.append(" and AId=?");
+            params.add(order.getaId());
+        }
+        if (order.getoDate()!=null){
+            sql.append(" and Odate=?");
+            params.add(order.getoDate());
+        }
+        if (order.getoState()!=null){
+            sql.append(" and Ostate=?");
+            params.add(order.getoState());
+        }
+        if (order.getoRecname()!=null){
+            sql.append(" and Orecname=?");
+            params.add(order.getoRecname());
+        }
+        if (order.getoRecadr()!=null){
+            sql.append(" and Orecadr=?");
+            params.add(order.getoRecadr());
+        }
+        if (order.getoRectel()!=null){
+            sql.append(" and Orectel=?");
+            params.add(order.getoRectel());
+        }
+        if (order.getuId()!=null){
+            sql.append(" and Ototalprice=?");
+            params.add(order.getuId());
+        }
         params.add(order.getOtotalprice());
-        ResultSet queryResult = dbUtil.getQueryResult(sql, params);
+        ResultSet queryResult = dbUtil.getQueryResult(sql.toString(), params);
         List<OrderInfo> orderInfoList = new ArrayList<>();
         while (queryResult.next()) {
             OrderInfo orderInfo = new OrderInfo();

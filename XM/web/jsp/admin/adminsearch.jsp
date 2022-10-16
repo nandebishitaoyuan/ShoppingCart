@@ -18,7 +18,7 @@
     document.mfsearch.submit();
   }
  </script>
-<form action="${pageContext.request.contextPath}/Search" method="post" name="mfsearch">
+<form action="${pageContext.request.contextPath}/search" method="get" name="mfsearch">
       <div>
        <input name="tsearch" value="请输入要搜索的关键字" onfocus="txtclear()"/>
        <input type="button" id="bsearch" name="bsearch" value="搜索" onclick="check()"/>
