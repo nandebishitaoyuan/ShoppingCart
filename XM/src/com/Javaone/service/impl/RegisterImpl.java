@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class RegisterImpl implements Register {
     //用户注册
     @Override
-    public Boolean register(String name, String pwd, String email) throws SQLException {
+    public Boolean userRegister(String name, String pwd, String email) throws SQLException {
         IUserInfo userInfo = new IUserInfoImpl();
         UserInfo user = new UserInfo(null, name, pwd, email);
         return userInfo.AddUserInfo(user) > 0;

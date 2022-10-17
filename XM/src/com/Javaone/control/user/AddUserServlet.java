@@ -1,7 +1,7 @@
-package com.Javaone.control;
+package com.Javaone.control.user;
 
-import com.Javaone.service.IsLogin;
-import com.Javaone.service.impl.IsLoginImpl;
+import com.Javaone.service.Register;
+import com.Javaone.service.impl.RegisterImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,22 +10,22 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class LoginUserServlet extends HttpServlet {
+public class AddUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
-        IsLogin userLogin = new IsLoginImpl();
-        Boolean login = null;
+        Register register = new RegisterImpl();
+        Boolean j = null;
         try {
-            login = userLogin.UserLogin(req.getParameter("name"), req.getParameter("pwd"));
+            j = register.userRegister(req.getParameter("name"), req.getParameter("pwd"), req.getParameter("email"));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        if (login){
-            resp.sendRedirect("/hello/jsp/user/cart.jsp");
+        if (j){
+            resp.sendRedirect("/hello/jsp/user/Login.jsp");
         }else {
-            resp.sendRedirect("/hello/jsp/1.jsp");
+            resp.sendRedirect("/hello/jsp/user/register.jsp");
         }
     }
 }

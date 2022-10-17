@@ -1,4 +1,4 @@
-package com.Javaone.control;
+package com.Javaone.control.goods;
 
 import com.Javaone.pojo.GoodsInfo;
 import com.Javaone.service.GoodsService;
@@ -18,7 +18,8 @@ public class SearchGoodsIngoServlet extends HttpServlet {
         GoodsService goodsService = new GoodsServiceImpl();
         try {
             List<GoodsInfo> tsearch = goodsService.getGoodsLike(req.getParameter("tsearch"));
-            System.out.println(tsearch);
+            req.setAttribute("tsearch", tsearch);
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

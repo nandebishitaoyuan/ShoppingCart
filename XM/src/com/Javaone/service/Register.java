@@ -4,5 +4,5 @@ import java.sql.SQLException;
 
 public interface Register {
     //用户注册
-    Boolean register(String name, String pwd, String email) throws SQLException;
+    Boolean userRegister(String name, String pwd, String email) throws SQLException;
 }

@@ -30,8 +30,8 @@ public class IsLoginImpl implements IsLogin {
         user.setuName(name);
         user.setuPwd(pwd);
         List<UserInfo> userInfoList = dao.getUserInfoList(user);
-        if (userInfoList != null && userInfoList.size() > 0) {
+        if (userInfoList != null && userInfoList.size() > 0)
             return true;
-        } else return false;
+        else return false;
     }
 }

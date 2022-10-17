@@ -11,7 +11,7 @@ public interface GoodsService {
      * @return 返回所有商品类别
      * @throws SQLException
      */
-    List getGclassInfo() throws SQLException;
+    List getgClassInfo() throws SQLException;
 
     /**
      * 获取所有商品信息

@@ -15,7 +15,7 @@ public class GoodsServiceImpl implements GoodsService {
     private IGoodsInfoDao goodsInfo = new IGoodsInfoDaoImpl();
 
     @Override
-    public List getGclassInfo() throws SQLException {
+    public List getgClassInfo() throws SQLException {
         DBUtil dbUtil = new DBUtil();
         String sql = "SELECT DISTINCT Gclass from goodsinfo";
         ResultSet result = dbUtil.getQueryResult(sql, null);
