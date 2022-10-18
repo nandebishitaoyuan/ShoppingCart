@@ -10,15 +10,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>订单管理</title>
+    <title>管理员管理</title>
 </head>
 <body>
-<table>
-    <c:forEach items="${requestScope.goods}" var="goods">
-        <div>
-            <img src="/hello/${goods.gImgurl}">
-        </div>
-    </c:forEach>
-</table>
+<div>
+    <a href="/hello/allAdminServlet">查看全部管理员</a>
+    <a href="/hello/jsp/admin/addAdmin.jsp">添加管理员</a>
+    <a href="/hello/jsp/admin/updateAdmin.jsp">修改管理员信息</a>
+    <a href="/hello/jsp/admin/deletAdmin.jsp">删除管理员</a>
+</div>
 </body>
 </html>

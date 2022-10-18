@@ -12,15 +12,22 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-public class SearchGoodsIngoServlet extends HttpServlet {
+public class AllGoodsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         GoodsService goodsService = new GoodsServiceImpl();
         try {
-            List<GoodsInfo> tsearch = goodsService.getGoodsLike(req.getParameter("tsearch"));
-            req.setAttribute("tsearch", tsearch);
+            List<GoodsInfo> goodsInfoList = goodsService.allGoods();
+            req.setAttribute("goods", goodsInfoList);
+            req.getRequestDispatcher("/jsp/admin/ordermanage.jsp").forward(req, resp);
+            System.out.println(goodsInfoList);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
     }
 }

@@ -35,6 +35,5 @@
         </div>
     </form>
 </div>
-${requestScope.login}
 </body>
 </html>

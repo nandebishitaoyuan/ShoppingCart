@@ -43,4 +43,74 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>allAdminServlet</servlet-name>
+        <servlet-class>com.Javaone.control.admin.AllAdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>allAdminServlet</servlet-name>
+        <url-pattern>/allAdminServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>addAdminServlet</servlet-name>
+        <servlet-class>com.Javaone.control.admin.AddAdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addAdminServlet</servlet-name>
+        <url-pattern>/addAdminServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>updateAdminServlet</servlet-name>
+        <servlet-class>com.Javaone.control.admin.UpdateAdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateAdminServlet</servlet-name>
+        <url-pattern>/updateAdminServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>search</servlet-name>
+        <servlet-class>com.Javaone.control.admin.Search</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>search</servlet-name>
+        <url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>search1</servlet-name>
+        <servlet-class>com.Javaone.control.admin.Search1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>search1</servlet-name>
+        <url-pattern>/Search1</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>deletAdminServlet</servlet-name>
+        <servlet-class>com.Javaone.control.admin.DeletAdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deletAdminServlet</servlet-name>
+        <url-pattern>/DeletAdminServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>allGoodsServlet</servlet-name>
+        <servlet-class>com.Javaone.control.goods.AllGoodsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>allGoodsServlet</servlet-name>
+        <url-pattern>/allGoodsServlet</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

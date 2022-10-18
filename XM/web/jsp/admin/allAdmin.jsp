@@ -10,15 +10,22 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>订单管理</title>
+  <title>全部管理员</title>
 </head>
 <body>
-<table>
-    <c:forEach items="${requestScope.goods}" var="goods">
-        <div>
-            <img src="/hello/${goods.gImgurl}">
-        </div>
-    </c:forEach>
+<table align="center" border="1px solid">
+  <tr>
+    <td>管理员编号</td>
+    <td>管理员名称</td>
+    <td>管理员权限等级</td>
+  </tr>
+<c:forEach items="${requestScope.adminList}" var="adminList">
+    <tr>
+      <td>${adminList.aid}</td>
+      <td>${adminList.aName}</td>
+      <td>${adminList.aLevel}</td>
+    </tr>
+</c:forEach>
 </table>
 </body>
 </html>

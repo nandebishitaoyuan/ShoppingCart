@@ -1,7 +1,10 @@
 package com.Javaone.service.impl;
 
+import com.Javaone.dao.IAdminInfoDao;
 import com.Javaone.dao.IUserInfo;
+import com.Javaone.dao.impl.IAdminInfoDaoImpl;
 import com.Javaone.dao.impl.IUserInfoImpl;
+import com.Javaone.pojo.AdminInfo;
 import com.Javaone.pojo.UserInfo;
 import com.Javaone.service.Register;
 
@@ -14,5 +17,12 @@ public class RegisterImpl implements Register {
         IUserInfo userInfo = new IUserInfoImpl();
         UserInfo user = new UserInfo(null, name, pwd, email);
         return userInfo.AddUserInfo(user) > 0;
+    }
+
+    @Override
+    public Boolean adminRegister(String name, String pwd, String level) throws SQLException {
+        IAdminInfoDao adminInfo = new IAdminInfoDaoImpl();
+        AdminInfo admin = new AdminInfo(null, name, pwd, level);
+        return adminInfo.AddAdminInfo(admin) > 0;
     }
 }

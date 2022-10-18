@@ -18,7 +18,7 @@ public interface GoodsService {
      * @return  返回所有商品的信息
      * @throws SQLException
      */
-    List<GoodsInfo> AllGoods() throws SQLException;
+    List<GoodsInfo> allGoods() throws SQLException;
 
     /**
      * 查找商品

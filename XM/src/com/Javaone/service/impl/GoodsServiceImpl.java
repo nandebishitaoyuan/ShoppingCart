@@ -27,7 +27,7 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
-    public List<GoodsInfo> AllGoods() throws SQLException {
+    public List<GoodsInfo> allGoods() throws SQLException {
         return goodsInfo.getGoodsInfoList();
     }
 

@@ -20,9 +20,9 @@
     <div style="display: block;">
       <form action="/hello/addUser"  method="post">
         <p>用户名</p>
-        <input type="text" placeholder="username" name="name"/>
+        <input type="text" name="name"/>
         <p>密码</p>
-        <input type="password" placeholder="password" name="pwd"/>
+        <input type="password" name="pwd"/>
         <p>邮箱</p>
         <input type="text" placeholder="email" name="email"/>
         <br/>

@@ -35,13 +35,14 @@ public class AdminServlet extends HttpServlet {
                 session.setAttribute("name",name);
                 GoodsServiceImpl goodsService = new GoodsServiceImpl();
                 List gClass = goodsService.getgClassInfo();
-                List<GoodsInfo> goodsInfos = goodsService.AllGoods();
+                List<GoodsInfo> goodsInfos = goodsService.allGoods();
                 req.setAttribute("gClass",gClass);
                 req.setAttribute("goodsInfos", goodsInfos);
-                req.getRequestDispatcher("/hello/jsp/admin/adminsearch.jsp").forward(req,resp);
+                req.getRequestDispatcher("/index.jsp").forward(req,resp);
             }else {
                 PrintWriter out = resp.getWriter();
-                out.println("<script>alert('用户名或密码错误');window.location = '/hello/jsp/admin/Login.jsp' </script>");
+                out.print("<html><head><meta charset='UTF-8'></head>");
+                out.print("<script>alert('用户名或密码错误');window.location = '/hello/jsp/admin/Login.jsp' </script>");
                 out.flush();
                 out.close();
             }

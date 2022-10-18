@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=utf-8"%>
 <%@ page import="com.Javaone.util.DBUtil,java.util.List"%>
-
+<%@ page import="com.Javaone.service.GoodsService" %>
+<%@ page import="com.Javaone.service.impl.GoodsServiceImpl" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <title>我的商城</title>
@@ -43,18 +45,18 @@
 						<li class="active "><a href="#" class=" radius ">首页</a></li>
 						<li><a href="adlogin.jsp">商品管理</a></li>
 						<li><a
-							href="${pageContext.request.contextPath}/jsp/admin/ordermanage.jsp">订单管理</a></li>
-						<li><a href="${pageContext.request.contextPath}/AdminManage">管理员管理</a></li>
+							href="${pageContext.request.contextPath}/allGoodsServlet">订单管理</a></li>
+						<li><a href="${pageContext.request.contextPath}/jsp/admin/admin.jsp">管理员管理</a></li>
 					</ul>
 				</div>
 				<div class="x5">
 					<%
-						if (session.getAttribute("user") == null) {
+						if (session.getAttribute("name") == null) {
 					%>
-					<%@ include file="login.jsp"%>
+					<% out.print("<script>window.location = '/hello/jsp/admin/Login.jsp' </script>"); %>
 					<%
 						} else {
-							out.println(session.getAttribute("user") + "你好,<br/>欢迎你光顾本店!!!");
+							out.println(session.getAttribute("name") + "你好,<br/>欢迎你光顾本店!!!");
 							out.println("<br/><a href='userinfo.jsp'>查看/修改个人信息</a>");
 							out.println("<a href='./Logout'>[注销]</a>");
 						}
@@ -87,8 +89,7 @@
 				<ul class="nav nav-main nav-navicon text-center" id="nav-main1">
 					<li class="nav-head">商品分类</li>
 					<%
-						String sql = "select distinct Gclass from GoodsInfo";
-						List<String> vclass = DBUtil.getInfo(sql);
+						List<String> vclass = new GoodsServiceImpl().getgClassInfo();
 						for (String st : vclass) {
 					%>
 					<li class="active"><a
@@ -135,7 +136,7 @@
 	
 	</div >
 	<br/><br/><br/><br/>
-	<%@include file="down.jsp" %>
+<%--	<%@include file="down.jsp" %>--%>
 <%-- 	<jsp:include page="down.jsp"> --%>
 <!-- 	<div class="container-layout margin-large-top bg-gray"> -->
 <!-- 	<div class="container bg-gray bg-inverse padding-big-top padding-big-bottom"> <div class="table-responsive padding hidden-l"> <ul class="nav nav-sitemap"> <li><a href="#">新闻资讯</a> <ul> <li><a href="#">新闻公告</a></li> <li><a href="#">业界资讯</a></li> <li><a href="#">媒体报道</a></li> </ul> </li> <li><a href="#">产品中心</a> <ul> <li><a href="#">产品分类</a></li> <li><a href="#">产品品牌</a></li> <li><a href="#">产品特色</a></li> </ul> </li> <li><a href="#">技术反馈</a> <ul> <li><a href="#">售后服务</a></li> <li><a href="#">营销网络</a></li> <li><a href="#">服务支持</a></li> </ul> </li> <li><a href="#">留言反馈</a></li> <li><a href="#">联系方式</a></li> </ul> </div> <div class="text-center">版权所有  Pintuer.com All Rights Reserved，图ICP备：380959609</div> </div> -->
