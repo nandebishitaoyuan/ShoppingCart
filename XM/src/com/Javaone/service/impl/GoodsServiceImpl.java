@@ -41,4 +41,9 @@ public class GoodsServiceImpl implements GoodsService {
             return null;
         }
     }
+
+    @Override
+    public Boolean updateGoodsInfo(GoodsInfo goods) throws SQLException {
+        return goodsInfo.UpdateGoodsInfo(goods) > 0;
+    }
 }

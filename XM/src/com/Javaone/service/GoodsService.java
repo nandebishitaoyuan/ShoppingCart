@@ -26,4 +26,12 @@ public interface GoodsService {
      * @throws SQLException
      */
     List<GoodsInfo> getGoodsLike(String name) throws SQLException;
+
+    /**
+     * 修改商品信息
+     * @param goodsInfo
+     * @return
+     * @throws SQLException
+     */
+    Boolean updateGoodsInfo(GoodsInfo goodsInfo) throws SQLException;
 }

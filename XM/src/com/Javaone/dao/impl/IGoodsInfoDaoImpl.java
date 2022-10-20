@@ -27,6 +27,7 @@ public class IGoodsInfoDaoImpl implements IGoodsInfoDao {
             goods.setgDate(queryResult.getDate("Gdate"));
             goods.setgImgurl(queryResult.getString("Gimgurl"));
             goods.sethLook(queryResult.getInt("Glook"));
+            goods.setgIntro(queryResult.getString("Gintro"));
             goods.setgBrief(queryResult.getString("Gbrief"));
             GoodsInfoList.add(goods);
         }
@@ -90,6 +91,7 @@ public class IGoodsInfoDaoImpl implements IGoodsInfoDao {
             goods.setgDate(queryResult.getDate("Gdate"));
             goods.setgImgurl(queryResult.getString("Gimgurl"));
             goods.sethLook(queryResult.getInt("Glook"));
+            goods.setgIntro(queryResult.getString("Gintro"));
             goods.setgBrief(queryResult.getString("Gbrief"));
             GoodsInfoList.add(goods);
         }

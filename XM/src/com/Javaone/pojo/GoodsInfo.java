@@ -18,6 +18,7 @@ public class GoodsInfo {
     private String gBrief;
 
     public GoodsInfo() {
+
     }
 
     public GoodsInfo(Integer gId, String gName, Double gPrice, String gClass, Integer gAmount, Date gDate, String gImgurl, Integer hLook, String gIntro, String gBrief) {

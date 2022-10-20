@@ -91,9 +91,9 @@
 <form action="/hello/SearchOrder" method="get">
     <table>
         <tr>
-            <td>在此搜索需要修改的订单号
-            <input type="text" name="orderID">
-            <input type="submit" value="搜索"></td>
+            <td>在此搜索需要修改的订单号</td>
+            <td><input type="text" name="orderID"></td>
+            <td><input type="submit" value="搜索"></td>
         </tr>
     </table>
 </form>

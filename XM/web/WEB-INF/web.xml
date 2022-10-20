@@ -141,4 +141,13 @@
         <servlet-name>UpdateOrderState</servlet-name>
         <url-pattern>/UpdateOrderState</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateGoodsInfoServlet</servlet-name>
+        <servlet-class>com.Javaone.control.goods.UpdateGoodsInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateGoodsInfoServlet</servlet-name>
+        <url-pattern>/UpdateGoodsInfoServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
