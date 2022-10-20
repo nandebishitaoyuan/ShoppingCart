@@ -26,8 +26,17 @@
 </head>
 <body>
 <div>
+    <form action="/hello/search" method="get">
+        <table>
+            <tr>
+                <td>在此搜索需要修改的商品名称</td>
+                <td><input type="text" name="gName"></td>
+                <td><input type="submit" value="搜索"></td>
+            </tr>
+        </table>
+    </form>
     <table>
-        <thead><h1>所有商品</h1></thead>
+        <thead><h1>所有商品</h1><h3><a href="/hello/jsp/goods/addGods.jsp">新增商品</a></h3></thead>
         <tr>
             <td>商品编号</td>
             <td>商品图片</td>
@@ -75,15 +84,6 @@
             </tr>
         </c:forEach>
     </table>
-    <form action="/hello/search" method="get">
-        <table>
-            <tr>
-                <td>在此搜索需要修改的商品名称</td>
-                <td><input type="text" name="gName"></td>
-                <td><input type="submit" value="搜索"></td>
-            </tr>
-        </table>
-    </form>
 </div>
 </body>
 </html>

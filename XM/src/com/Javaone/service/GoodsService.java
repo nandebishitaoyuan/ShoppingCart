@@ -34,4 +34,20 @@ public interface GoodsService {
      * @throws SQLException
      */
     Boolean updateGoodsInfo(GoodsInfo goodsInfo) throws SQLException;
+
+    /**
+     * 删除商品
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+    Boolean delGoods(Integer id) throws SQLException;
+
+    /**
+     * 添加商品
+     * @param goodsInfo
+     * @return
+     * @throws SQLException
+     */
+    Boolean addGoods(GoodsInfo goods) throws SQLException;
 }

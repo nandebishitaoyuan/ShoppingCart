@@ -40,6 +40,7 @@
             <td>购买人数</td>
             <td>作者</td>
             <td>简介</td>
+            <td>商品状态</td>
         </tr>
         <c:forEach items="${requestScope.gList}" var="goods">
             <tr>
@@ -73,6 +74,9 @@
                 <td>
                     <p>${goods.gBrief}</p>
                 </td>
+                <td>
+                    <p>正常</p>
+                </td>
             </tr>
             <tr>
                 <td colspan="10"><h2>修改后的信息</h2></td>
@@ -104,10 +108,13 @@
                     <input type="text" name="hLook" value="${goods.hLook}">
                 </td>
                 <td>
-                    <input type="text" name="gIntro" value="${goods.gIntro}">
+                    <textarea name="gIntro" rows="5">${goods.gIntro}</textarea>
                 </td>
                 <td>
-                    <input type="text" name="gBrief" value="${goods.gBrief}">
+                    <textarea name="gBrief" rows="5">${goods.gBrief}</textarea>
+                </td>
+                <td>
+                    <input type="checkbox" name="del" value="del">删除该商品
                 </td>
             </tr>
             <tr>

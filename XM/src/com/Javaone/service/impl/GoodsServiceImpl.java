@@ -46,4 +46,14 @@ public class GoodsServiceImpl implements GoodsService {
     public Boolean updateGoodsInfo(GoodsInfo goods) throws SQLException {
         return goodsInfo.UpdateGoodsInfo(goods) > 0;
     }
+
+    @Override
+    public Boolean delGoods(Integer id) throws SQLException {
+        return goodsInfo.DeleteGoodsInfo(id) > 0;
+    }
+
+    @Override
+    public Boolean addGoods(GoodsInfo goods) throws SQLException {
+        return goodsInfo.AddGoodsInfo(goods) > 0;
+    }
 }

@@ -22,8 +22,6 @@ public class SearchGoodsIngoServlet extends HttpServlet {
             if (req.getParameter("gName") != null){
                 List<GoodsInfo> goodsInfoList = goodsService.getGoodsLike(req.getParameter("gName"));
                 req.setAttribute("gList", goodsInfoList);
-                System.out.println(goodsInfoList);
-                System.out.println(req.getParameter("gName"));
                 req.getRequestDispatcher("/jsp/goods/goodsInfo.jsp").forward(req, resp);
             }
             if (req.getParameter("tsearch") != null){
