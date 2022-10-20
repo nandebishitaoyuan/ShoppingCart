@@ -68,10 +68,13 @@ public class IOrderInfoDaoImpl implements IOrderInfoDao {
             params.add(order.getoRectel());
         }
         if (order.getuId()!=null){
-            sql.append(" and Ototalprice=?");
+            sql.append(" and Uid=?");
             params.add(order.getuId());
         }
-        params.add(order.getOtotalprice());
+        if (order.getOtotalprice()!=null){
+            sql.append(" and Ototalprice=?");
+            params.add(order.getOtotalprice());
+        }
         ResultSet queryResult = dbUtil.getQueryResult(sql.toString(), params);
         List<OrderInfo> orderInfoList = new ArrayList<>();
         while (queryResult.next()) {

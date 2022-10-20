@@ -23,14 +23,12 @@ public class DeletAdminServlet extends HttpServlet {
                 if ("确定".equals(req.getParameter("yes"))) {
                     Boolean i = adminService.deletAdmin(Integer.parseInt(req.getParameter("id")));
                     if (i){
-                        out.print("<script>alert('删除成功！');window.location = '/hello/jsp/admin/deletAdmin.jsp'</script>");
-                        out.flush();
-                        out.close();
+                        out.print("<script>alert('删除成功！');window.location = '/hello/allAdminServlet' </script>");
                     }else {
                         out.print("<script>alert('删除失败！');window.location = '/hello/jsp/admin/deletAdmin.jsp' </script>");
-                        out.flush();
-                        out.close();
                     }
+                    out.flush();
+                    out.close();
                 }
                 if("取消".equals(req.getParameter("yes"))) {
                     out.print("<script>alert('取消成功！');window.location = '/hello/jsp/admin/deletAdmin.jsp' </script>");

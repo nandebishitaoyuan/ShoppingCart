@@ -23,7 +23,7 @@ public class OrderInfoTest {
         IOrderInfoDaoImpl dao = new IOrderInfoDaoImpl();
         OrderInfo order = new OrderInfo();
         //order.setuId(10003);
-        order.setoId(4);
+        order.setoId(2);
         List<OrderInfo> orderInfoList = dao.getOrderInfoList(order);
         for (OrderInfo orderInfo : orderInfoList) {
             System.out.println(orderInfo);

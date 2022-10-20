@@ -29,12 +29,12 @@ public class AddAdminServlet extends HttpServlet {
             PrintWriter out = resp.getWriter();
             out.print("<html><head><meta charset='UTF-8'></head>");
             if (i){
-                out.print("<script>alert('添加成功！');window.location = '/hello/jsp/admin/Login.jsp' </script>");
+                out.print("<script>alert('添加成功！');window.location = '/hello/allAdminServlet' </script>");
                 out.flush();
                 out.close();
                 resp.sendRedirect("/jsp/admin/Login.jsp");
             }else {
-                out.print("<script>alert('添加失败！');window.location = '/hello/jsp/admin/addAdmin.jsp' </script>");
+                out.print("<script>alert('添加失败！');window.location = '/hello/jsp/admin/admin.jsp' </script>");
                 out.flush();
                 out.close();
                 resp.sendRedirect("/jsp/admin/addAdmin.jsp");

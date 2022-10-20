@@ -19,8 +19,7 @@ public class AllGoodsServlet extends HttpServlet {
         try {
             List<GoodsInfo> goodsInfoList = goodsService.allGoods();
             req.setAttribute("goods", goodsInfoList);
-            req.getRequestDispatcher("/jsp/admin/ordermanage.jsp").forward(req, resp);
-            System.out.println(goodsInfoList);
+            req.getRequestDispatcher("/jsp/admin/CManagement.jsp").forward(req, resp);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

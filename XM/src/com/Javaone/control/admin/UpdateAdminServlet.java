@@ -25,7 +25,7 @@ public class UpdateAdminServlet extends HttpServlet {
             PrintWriter out = resp.getWriter();
             out.print("<html><head><meta charset='UTF-8'></head>");
             if (i){
-                out.print("<script>alert('修改成功！');window.location = '/hello/jsp/admin/updateAdmin.jsp' </script>");
+                out.print("<script>alert('修改成功！');window.location = '/hello/allAdminServlet' </script>");
             }else {
                 out.print("<script>alert('修改失败！');window.location = '/hello/jsp/admin/updateAdmin.jsp' </script>");
             }

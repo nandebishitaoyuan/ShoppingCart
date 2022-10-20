@@ -113,4 +113,32 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>OrdersServlet</servlet-name>
+        <servlet-class>com.Javaone.control.orders.OrdersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrdersServlet</servlet-name>
+        <url-pattern>/ordersServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SearchOrder</servlet-name>
+        <servlet-class>com.Javaone.control.orders.SearchOrder</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchOrder</servlet-name>
+        <url-pattern>/SearchOrder</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UpdateOrderState</servlet-name>
+        <servlet-class>com.Javaone.control.orders.UpdateOrderState</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateOrderState</servlet-name>
+        <url-pattern>/UpdateOrderState</url-pattern>
+    </servlet-mapping>
 </web-app>

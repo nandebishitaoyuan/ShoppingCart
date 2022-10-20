@@ -113,7 +113,6 @@ public class OrderInfo {
     public Double getOtotalprice() {
         return Ototalprice;
     }
-
     public void setOtotalprice(Double ototalprice) {
         Ototalprice = ototalprice;
     }

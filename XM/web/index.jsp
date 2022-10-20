@@ -43,10 +43,10 @@
 				<div class="x5 text-right ">
 					<ul class="nav nav-menu nav-inline">
 						<li class="active "><a href="#" class=" radius ">首页</a></li>
-						<li><a href="adlogin.jsp">商品管理</a></li>
+						<li><a href="${pageContext.request.contextPath}/allGoodsServlet">商品管理</a></li>
 						<li><a
-							href="${pageContext.request.contextPath}/allGoodsServlet">订单管理</a></li>
-						<li><a href="${pageContext.request.contextPath}/jsp/admin/admin.jsp">管理员管理</a></li>
+							href="${pageContext.request.contextPath}/ordersServlet">订单管理</a></li>
+						<li><a href="${pageContext.request.contextPath}/allAdminServlet">管理员管理</a></li>
 					</ul>
 				</div>
 				<div class="x5">

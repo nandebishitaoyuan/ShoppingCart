@@ -10,8 +10,18 @@
 <html>
 <head>
     <title>修改管理员信息</title>
+    <style type="text/css">
+        div{
+            width: 100%;
+        }
+        table{
+            font-size: 30px;
+            align-content: center;
+        }
+    </style>
 </head>
 <body>
+<div>
     <form action="/hello/Search" method="get">
         <table>
             <tr>
@@ -45,5 +55,6 @@
             </table>
         </form>
     </c:forEach>
+</div>
 </body>
 </html>

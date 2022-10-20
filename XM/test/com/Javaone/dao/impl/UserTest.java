@@ -54,4 +54,5 @@ public class UserTest {
         userInfo.DeleteUserInfo(10003);
         testQuery();
     }
+
 }

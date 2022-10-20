@@ -68,7 +68,6 @@ public class DBUtil {
         if (resultSet != null) {
             try {
                 resultSet.close();
-                System.out.println("resultSet关闭成功");
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
@@ -76,7 +75,6 @@ public class DBUtil {
         if (statement != null) {
             try {
                 statement.close();
-                System.out.println("statement关闭成功");
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
@@ -84,7 +82,6 @@ public class DBUtil {
         if (conn != null) {
             try {
                 conn.close();
-                System.out.println("conn关闭成功");
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
